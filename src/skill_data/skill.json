@@ -1,0 +1,64 @@
+{
+    "skills": [
+        {
+            "name": "HTML",
+            "parent": "root",
+            "weight": "1"
+        },
+        {
+            "name": "CSS",
+            "parent": "HTML",
+            "weight": "1"
+        },
+        {
+            "name": "Sass",
+            "parent": "CSS",
+            "weight": "2"
+        },
+        {
+            "name": "Less",
+            "parent": "CSS",
+            "weight": "2"
+        },
+        {
+            "name": "JavaScript",
+            "parent": "HTML",
+            "weight": "2"
+        },
+        {
+            "name": "NodeJS",
+            "parent": "JavaScript",
+            "weight": "2"
+        },
+        {
+            "name": "npm",
+            "parent": "NodeJS",
+            "weight": "2"
+        },
+        {
+            "name": "browserify",
+            "parent": "npm",
+            "weight": "1"
+        },
+        {
+            "name": "npm++",
+            "parent": "npm",
+            "weight": "1"
+        },
+        {
+            "name": "npm+++",
+            "parent": "npm++",
+            "weight": "1"
+        },
+        {
+            "name": "AngularJS",
+            "parent": "JavaScript",
+            "weight": "3"
+        },
+        {
+            "name": "JQuery",
+            "parent": "JavaScript",
+            "weight": "2"
+        }
+    ]
+}
