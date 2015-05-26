@@ -1,8 +1,7 @@
 var d3 = require('d3');
-var data = require('../skill_data/skill.json');
 var format_data = require('./format_data.js');
 
-module.exports = function(in_height, in_width) {
+module.exports = function(data, in_height, in_width) {
 
     var root = format_data(data);
 
@@ -14,12 +13,9 @@ module.exports = function(in_height, in_width) {
 
     var tree = d3.layout.tree()
         .size([height , width * 0.8]);
-        //.separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) });
-        //(a.parent == b.parent ? 2 : 4) / a.depth;
 
     var diagonal = d3.svg.diagonal()
         .projection(function(d) { return [d.y + node_width, d.x] });
-        //[d.y, d.x / 180 * Math.PI];
 
     var svg = d3.select("body").append("svg")
         .attr("width", width+100)
@@ -55,10 +51,8 @@ module.exports = function(in_height, in_width) {
         .attr("dy", '1em')
         .attr("dx", '0.2em')
         .attr("text-anchor", function(d) { return "start"; })
-        //.attr("transform", function(d) { return "translate(8)"; })
         .text(function(d) { return d.name; });
 
-    //d3.select(self.frameElement).style("height", height + "px");
 }
 
 function nodeAttr(node) {
